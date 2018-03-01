@@ -1,5 +1,5 @@
 <template>
-  <div class="echarts">
+  <div class="echarts page">
     <iframe src="http://echarts.baidu.com/" frameborder="0" class="iframe"></iframe>
     <!--<div id="myChart" style="width: 100%;height: 500px;"></div>-->
   </div>
@@ -40,8 +40,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .iframe {
-    width: 100%;
-    min-height: 800px;
-  }
+
 </style>

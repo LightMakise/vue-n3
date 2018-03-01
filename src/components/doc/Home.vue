@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello page">
 
     <iframe src="https://n3-components.github.io/N3-components/component.html#n3LayoutDocs" frameborder="0" class="iframe"></iframe>
   </div>
@@ -27,8 +27,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .iframe{
-    width: 100%;
-    min-height: 800px;
-  }
+
 </style>

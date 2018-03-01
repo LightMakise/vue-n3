@@ -4,6 +4,8 @@ import Home from '@/components/doc/Home'
 import Echarts from '@/components/doc/Echarts'
 import Axios from '@/components/doc/Axios'
 import ExportTable from '@/components/doc/ExportTable'
+import Editor from '@/components/doc/Editor'
+import Ueditor from '@/components/doc/Ueditor'
 
 Vue.use(Router)
 
@@ -30,6 +32,14 @@ export default new Router({
       path: '/doc/exportTable',
       name: 'ExportTable',
       component: ExportTable
+    },{
+      path: '/doc/editor',
+      name: 'Editor',
+      component: Editor
+    },{
+      path: '/doc/ueditor',
+      name: 'Ueditor',
+      component: Ueditor
     },
   ]
 })

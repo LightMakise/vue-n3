@@ -1,6 +1,7 @@
 *{margin: 0;padding: 0}
 body {
   font-family: Helvetica Neue,Helvetica,microsoft yahei,arial,STHeiTi,sans-serif;
+  height: 100%;
 
 }
 #app, .wrapper, body, html{
@@ -34,3 +35,13 @@ body {
 
 
 .full{width: 100%}
+
+.page{
+  width: 90%;
+  height: 100%;
+  margin: 15px auto;
+}
+.iframe {
+  width: 100%;
+  height: 75%;
+}
