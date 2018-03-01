@@ -3,10 +3,10 @@
         <n3-nav :default-active="activeIndex" mode="vertical" @select="handleSelect">
             <n3-sub-nav index="1" v-for="item in list" :key="item.id">
                 <template slot="title">
-                    <n3-icon type="tags"></n3-icon>
+                    <n3-icon :type="item.icon"></n3-icon>
                     {{item.title}}
                 </template>
-                <n3-nav-item v-for="sub in item.subList" :key="sub.id">{{sub.title}}</n3-nav-item>
+                <n3-nav-item v-for="sub in item.subList" :key="sub.id" :index="sub.router">{{sub.title}}</n3-nav-item>
             </n3-sub-nav>
 
         </n3-nav>
@@ -37,7 +37,11 @@
                 ]
             }
         },
-        methods: {}
+        methods: {
+            handleSelect(){
+                
+            }
+        }
     }
 </script>
 
