@@ -2,7 +2,7 @@
 body {
   font-family: Helvetica Neue,Helvetica,microsoft yahei,arial,STHeiTi,sans-serif;
   height: 100%;
-
+  min-width: 1024px;
 }
 #app, .wrapper, body, html{
   width: 100%;
@@ -24,6 +24,8 @@ body {
 .font-20{font-size: 20px !important;}
 .font-21{font-size: 21px !important;}
 .font-22{font-size: 22px !important;}
+.font-26{font-size: 26px !important;}
+.font-28{font-size: 28px !important;}
 .font-30{font-size: 30px !important;}
 .font-40{font-size: 40px !important;}
 .font-50{font-size: 50px !important;}
