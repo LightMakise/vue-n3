@@ -4,6 +4,7 @@ var navData = [
         icon: "tags",
         target:1,
         rootRouter: "/functional",
+        defaultPath:"/organizational",
         subList: [
             {
                 title: "机构管理",
@@ -18,6 +19,7 @@ var navData = [
         icon: "bars",
         target:2,
         rootRouter: "/functional",
+        defaultPath:"/datalocking",
         subList: [
             {
                 title: "数据锁定",

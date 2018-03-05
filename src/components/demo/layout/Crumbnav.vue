@@ -34,7 +34,7 @@
                         navData.forEach((item1,index)=>{
                             if(item.meta.breadcrumbTarget == item1.target){
                                 var itemObj = {
-                                    path: '/demo' + item1.rootRouter,
+                                    path: '/demo' + item1.rootRouter + item1.defaultPath,
                                     title: item1.title
                                 }
                                 this.pathArr.push(itemObj)
