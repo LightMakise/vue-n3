@@ -27,11 +27,26 @@ Vue.prototype.$echarts = echarts
 import "@/assets/css/theme/original.css"
 Vue.config.productionTip = false
 
+
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
     store,
     router,
     components: {App},
-    template: '<App/>'
+    template: '<App/>',
+    created(){
+        Array.prototype.contains = (obj)=>{
+            let i = this.length;
+            console.log(this);
+            while (i--) {
+                console.log(this[i].title);
+                console.log(obj.title);
+                if (this[i].title === obj.title) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
 })

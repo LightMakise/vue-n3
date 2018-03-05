@@ -1,17 +1,20 @@
 <template>
-    <div class="system-index">
-        系统设置
+    <div class="enterprisestandard">
+        企业标准
+        <input type="text">
     </div>
 </template>
 
 <script>
     export default {
-        name: 'SystemIndex',
+        name: 'EnterpriseStandard',
         data () {
             return {}
         },
         methods: {
+            handleSelect(){
 
+            }
         },
     }
 </script>

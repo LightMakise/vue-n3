@@ -1,2 +1,5 @@
 .n3-btn-primary{background-color: #54b4eb !important;border-color:#54b4eb !important}
 .n3-btn-primary.n3-btn-active{background-color: #1684c2 !important;border-color:#1684c2 !important;}
+.n3-nav-tabs-pills>li.n3-nav-tabs-active>a{background-color:#54b4eb !important;border-color:#1684c2 !important;}
+.n3-breadcrumb{padding: 0;}
+.n3-breadcrumb>.n3-breadcrumb-active{color: #54b4eb}

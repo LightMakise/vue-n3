@@ -1,17 +1,20 @@
 <template>
-    <div class="system-index">
-        系统设置
+    <div class="datalocking">
+        数据锁定
+        <input type="text">
     </div>
 </template>
 
 <script>
     export default {
-        name: 'SystemIndex',
+        name: 'DataLocking',
         data () {
             return {}
         },
         methods: {
+            handleSelect(){
 
+            }
         },
     }
 </script>

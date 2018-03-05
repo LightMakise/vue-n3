@@ -2,17 +2,21 @@
     <div class="home">
         <v-header @changeTab="changTab"></v-header>
         <div class="main">
-            <router-view/>
+            <v-crumbnav></v-crumbnav>
+            <keep-alive>
+                <router-view/>
+            </keep-alive>
         </div>
     </div>
 </template>
 
 <script>
     import vHeader from "@/components/demo/layout/Header.vue"
+    import vCrumbnav from "@/components/demo/layout/Crumbnav.vue"
 
     export default {
         name: 'Home',
-        components: {vHeader},
+        components: {vHeader,vCrumbnav},
         data () {
             return {}
         },
@@ -22,9 +26,9 @@
         methods: {
             changTab(v){
                 if(v === "system"){
-                    this.$router.push({name:"SystemIndex"})
+                    this.$router.push({path:"/demo/system"})
                 }else{
-                    this.$router.push({name:"FunctionalIndex"})
+                    this.$router.push({path:"/demo/functional"})
                 }
             }
         },

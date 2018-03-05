@@ -12,9 +12,17 @@
                 </n3-button>
             </n3-button-group>
         </div>
-        <div class="info pull-left color-white text-center">
+        <div class="info pull-left color-white ">
             <n3-icon type="user-md"></n3-icon>
             您好，系统管理员
+            <n3-dropdown>
+            <div slot="trigger">
+                <n3-button>
+                    <n3-icon type="gear"></n3-icon>
+                </n3-button>
+            </div>
+            <li><a href="#" @click="logout">退出</a></li>
+        </n3-dropdown>
         </div>
     </div>
 </template>
@@ -32,6 +40,10 @@
             select(v){
                 this.curPage = v
                 this.$emit("changeTab",v)
+            },
+            logout(){
+                this.$store.commit("logout")
+                this.$router.push({path:"/demo/login"})
             }
         }
     }
@@ -54,6 +66,15 @@
         }
         .info{
             width: 20%;
+        }
+        .n3-dropdown-con{
+            top:-2px;
+        }
+        .n3-btn-default{
+            background: none;
+            border: 0;
+            line-height: 20px;
+            color: white;
         }
     }
 </style>
