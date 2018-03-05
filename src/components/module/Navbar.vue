@@ -51,6 +51,12 @@
                         }else{
                             this.$router.push({path:this.$store.state.navbar[parseInt(id)-1].path})
                         }
+                    }else{
+                        if(parseInt(id) === 0){
+                            this.$router.push({path:this.$store.state.navbar[parseInt(id)+1].path})
+                        }else{
+                            this.$router.push({path:this.$store.state.navbar[parseInt(id)-1].path})
+                        }
                     }
                     this.$store.commit('removeNavbar',id)
                 }
