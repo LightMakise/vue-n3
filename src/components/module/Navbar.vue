@@ -15,7 +15,8 @@
         name: 'Navbar',
         data () {
             return {
-                items: this.$store.state.navbar
+                items: this.$store.state.navbar,
+                curRouter:"",
             }
         },
         methods: {
@@ -26,6 +27,7 @@
                         Vue.set(item, 'active', false);
                     });
                     Vue.set(item, 'active', true);
+                    that.curRouter = item.path
                 });
                 that.$router.push({path: item.path})
             },
@@ -34,6 +36,7 @@
                 that.items.forEach(function (item) {
                     if (item.path === that.$route.path) {
                         Vue.set(item, 'active', true);
+                        that.curRouter = item.path
                     } else {
                         Vue.set(item, 'active', false);
                     }
@@ -42,10 +45,12 @@
             removeTarget(event,id){
                 event.cancelBubble = true;
                 if(this.$store.state.navbar.length > 1){
-                    if(parseInt(id) === 0){
-                        this.$router.push({path:this.$store.state.navbar[parseInt(id)+1].path})
-                    }else{
-                        this.$router.push({path:this.$store.state.navbar[parseInt(id)-1].path})
+                    if(this.curRouter !== this.$route.path){
+                        if(parseInt(id) === 0){
+                            this.$router.push({path:this.$store.state.navbar[parseInt(id)+1].path})
+                        }else{
+                            this.$router.push({path:this.$store.state.navbar[parseInt(id)-1].path})
+                        }
                     }
                     this.$store.commit('removeNavbar',id)
                 }
