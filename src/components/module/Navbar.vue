@@ -16,7 +16,7 @@
         data () {
             return {
                 items: this.$store.state.navbar,
-                curRouter:"",
+                curRouter: "",
             }
         },
         methods: {
@@ -42,23 +42,19 @@
                     }
                 });
             },
-            removeTarget(event,id){
+            removeTarget(event, id){
+
                 event.cancelBubble = true;
-                if(this.$store.state.navbar.length > 1){
-                    if(this.curRouter !== this.$route.path){
-                        if(parseInt(id) === 0){
-                            this.$router.push({path:this.$store.state.navbar[parseInt(id)+1].path})
-                        }else{
-                            this.$router.push({path:this.$store.state.navbar[parseInt(id)-1].path})
+                if (this.$store.state.navbar.length > 1) {
+                    if (this.curRouter === this.items[id].path) {
+                        if (parseInt(id) === 0) {
+                            this.$router.push({path: this.$store.state.navbar[parseInt(id) + 1].path})
+                        } else {
+                            this.$router.push({path: this.$store.state.navbar[parseInt(id) - 1].path})
                         }
-                    }else{
-                        if(parseInt(id) === 0){
-                            this.$router.push({path:this.$store.state.navbar[parseInt(id)+1].path})
-                        }else{
-                            this.$router.push({path:this.$store.state.navbar[parseInt(id)-1].path})
-                        }
+
                     }
-                    this.$store.commit('removeNavbar',id)
+                    this.$store.commit('removeNavbar', id)
                 }
 
             }
