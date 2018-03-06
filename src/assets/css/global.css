@@ -97,7 +97,7 @@ body {
 }
 
 .full {
-    width: 100%
+    width: 100% !important;
 }
 /*文字不能被选中*/
 .noselect {

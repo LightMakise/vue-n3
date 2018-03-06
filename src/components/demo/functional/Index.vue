@@ -47,7 +47,7 @@
             box-sizing: border-box;
             margin-left: 200px;
             .page-content{
-                margin-top: 5px;
+                margin-top: 20px;
                 padding: 0 15px;
             }
         }

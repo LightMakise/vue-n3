@@ -17,12 +17,12 @@ const router = new Router({
         //路径转发
         {
             path: '/',
-            redirect: '/demo/home'
+            redirect: '/demo/functional'
         },
         //404页面跳转
         {
             path: '*',
-            redirect: '/demo/home'
+            redirect: '/demo/functional'
         },
         //登录
         {
@@ -58,7 +58,7 @@ const router = new Router({
                     children:[
                         {
                             path: '/demo/functional',
-                            redirect: '/demo/functional/organizational'
+                            redirect: '/demo/functional/user'
                         },
                         {
                             path: '/demo/functional/organizational',

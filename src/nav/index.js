@@ -1,15 +1,16 @@
-var navData = [
+const navData = [
     {
-        title: "机构用户管理",
+        title: "管理员管理",
         icon: "tags",
         target:1,
         rootRouter: "/functional",
-        defaultPath:"/organizational",
+        defaultPath:"/user",
         subList: [
+            // {
+            //     title: "机构管理",
+            //     router: "/organizational",
+            // },
             {
-                title: "机构管理",
-                router: "/organizational",
-            }, {
                 title: "用户管理",
                 router: "/user",
             },

@@ -34,8 +34,8 @@
             if(this.$store.state.navbar.length === 0){
                 let obj = {
                     id:0,
-                    title:"机构管理",
-                    path:'/demo/functional/organizational' ,
+                    title:"用户管理",
+                    path:'/demo/functional/user' ,
                 }
                 this.$store.commit('addNavbar', obj)
             }
