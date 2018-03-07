@@ -1,9 +1,9 @@
 <template>
     <div class="organizational">
-        <n3-tabs @change="change" :value="0">
+        <n3-tabs @change="change" :value="1">
             <n3-tab header="用户管理">
                 <div class="query">
-                    <n3-form ref='form'>
+                    <n3-form ref='form-query'>
                         <n3-form-item
                                 label="用户ID:"
                                 :label-col="3">
@@ -62,10 +62,6 @@
                                     width="150px">
                             </n3-datepicker>
                             -
-
-
-
-
                             <n3-datepicker
                                     v-model="model.endtime"
                                     format="yyyy-MM-dd"
@@ -96,10 +92,17 @@
                             <n3-row>
                                 <n3-column :col="4" class="context">
                                     共搜索出 126 条结果
+
                                 </n3-column>
                                 <n3-column :col="8" class="context text-right">
-                                    <n3-button type="primary"><n3-icon type="folder-open-o"></n3-icon> 导出用户</n3-button>
-                                    <n3-button type="primary"> <n3-icon type="plus-circle"></n3-icon> 新增用户</n3-button>
+                                    <n3-button type="primary">
+                                        <n3-icon type="folder-open-o"></n3-icon>
+                                        导出用户
+                                    </n3-button>
+                                    <n3-button type="primary">
+                                        <n3-icon type="plus-circle"></n3-icon>
+                                        新增用户
+                                    </n3-button>
                                 </n3-column>
                             </n3-row>
                         </n3-container>
@@ -119,6 +122,83 @@
                 </div>
             </n3-tab>
             <n3-tab header="用户添加/修改">
+                <div class="modify">
+
+                    <n3-form ref='modify'>
+                        <n3-form-item
+                                label="用户ID:"
+                                :label-col="3">
+                            <n3-input
+                                    name="userId"
+                                    :disabled="true"
+                                    v-model="modify.userId"
+                                    placeholder="请输入用户ID"
+                            >
+                            </n3-input>
+                        </n3-form-item>
+                        <n3-form-item
+                                need
+                                label="用户名:"
+                                :label-col="3">
+                            <n3-input
+                                    name="username"
+                                    :rules="[{type:'required'}]"
+                                    :custom-validate="nameValidate"
+                                    placeholder="请输入用户名"
+                            >
+                            </n3-input>
+                        </n3-form-item>
+                        <n3-form-item
+                                need
+                                label="姓名:"
+                                :label-col="3">
+                            <n3-input
+                                    name="nameId"
+                                    v-model="modify.name"
+                                    :rules="[{type:'required'}]"
+                                    :custom-validate="nameValidate"
+                                    placeholder="请输入姓名"
+                            >
+                            </n3-input>
+                        </n3-form-item>
+                        <n3-form-item
+                                need
+                                label="所在组织:"
+                                :label-col="3">
+                            <n3-select v-model="modify.gruop" placeholder="全部" class="select">
+                                <n3-option value="Apple">Apple</n3-option>
+                                <n3-option value="Banana">Banana</n3-option>
+                                <n3-option value="Cherry">Cherry</n3-option>
+                                <n3-option value="Orange">Orange</n3-option>
+                                <n3-option value="Grape">Grape</n3-option>
+                            </n3-select>
+                        </n3-form-item>
+                        <n3-form-item
+                                need
+                                label="选择角色:"
+                                :label-col="3">
+                            <n3-select v-model="modify.user" placeholder="全部" class="select">
+                                <n3-option value="Apple">Apple</n3-option>
+                                <n3-option value="Banana">Banana</n3-option>
+                                <n3-option value="Cherry">Cherry</n3-option>
+                                <n3-option value="Orange">Orange</n3-option>
+                                <n3-option value="Grape">Grape</n3-option>
+                            </n3-select>
+                        </n3-form-item>
+                        <n3-form-item
+                                need
+                                label="启动状态:"
+                                :label-col="3">
+                            <n3-switch ontext="启用" offtext="禁用" @change="toggle" v-model="modify.status" class="toggle">
+
+                            </n3-switch>
+                        </n3-form-item>
+                        <n3-form-item>
+                            <n3-button type="primary" @click.native="submitModify">提交</n3-button>
+                            <n3-button class="cancel">取消</n3-button>
+                        </n3-form-item>
+                    </n3-form>
+                </div>
             </n3-tab>
         </n3-tabs>
     </div>
@@ -129,6 +209,16 @@
         name: 'User',
         data () {
             return {
+                modify: {
+                    userId: "43652",
+                    gruop: "",
+                    username: "",
+                    name:"",
+                    user: "",
+                    starttime: "",
+                    endtime: "",
+                    status: true,
+                },
                 model: {
                     userId: "",
                     gruop: "",
@@ -138,10 +228,10 @@
                     endtime: "",
                     status: true,
                 },
-                pagination:{
-                    current:1,
-                    total:4,
-                    pagesize:10
+                pagination: {
+                    current: 1,
+                    total: 4,
+                    pagesize: 10
                 },
                 selection: {
                     checkRows: [],
@@ -163,7 +253,7 @@
                         dataIndex: 'num',
                         width: '50px',
                         render: (text, record, index) => {
-                            return `<div>{{'${index+1}'}}</div>`
+                            return `<div>{{'${index + 1}'}}</div>`
                         }
                     },
                     {
@@ -260,6 +350,11 @@
             change(){
 
             },
+            submitModify(){
+              this.$refs.modify.validateFields(result=>{
+                  console.log(result);
+              })
+            },
             nameValidate (val) {
                 if (/[\u4E00-\u9FA5\uF900-\uFA2D]/.test(val)) {
                     return {
@@ -280,7 +375,9 @@
 </script>
 <style lang="less">
     .organizational {
-        .n3-btn-group > .n3-btn,.n3-dropdown-menu>li>a{min-width: 200px}
+        .n3-btn-group > .n3-btn, .n3-dropdown-menu > li > a {
+            min-width: 220px
+        }
         .n3-btn {
             width: 150px;
         }
@@ -300,10 +397,22 @@
                 color: #ffffff;
             }
         }
-        .table{
+        .table {
             margin-top: 10px;
             height: 30px;
             line-height: 30px;
+        }
+        .modify {
+            margin-top: 15px;
+            .n3-input-con,.select,.toggle{
+                padding-left: 50px;
+            }
+            .n3-dropdown-menu{
+                margin-left: 50px;
+            }
+            .cancel{
+                margin-left: 50px;
+            }
         }
     }
 </style>
