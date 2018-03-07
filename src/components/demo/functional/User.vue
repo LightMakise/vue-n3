@@ -87,6 +87,15 @@
                 </div>
 
                 <div class="table">
+                    <n3-modal  effect="zoom" width="400px" ref="customModal"  title="新增用户">
+                        <div slot="header">
+                        </div>
+                        <div slot="body" class="text-center">
+                            <n3-uploader type="drag" url="http://test.com/" @error="onError"></n3-uploader>
+                          </div>
+                        <div slot="footer">
+                        </div>
+                    </n3-modal>
                     <div class="tableInfo">
                         <n3-container fluid>
                             <n3-row>
@@ -95,11 +104,11 @@
 
                                 </n3-column>
                                 <n3-column :col="8" class="context text-right">
-                                    <n3-button type="primary">
+                                    <n3-button type="primary" @click.native="exportTable">
                                         <n3-icon type="folder-open-o"></n3-icon>
                                         导出用户
                                     </n3-button>
-                                    <n3-button type="primary">
+                                    <n3-button type="primary" @click.native="showCustomModal">
                                         <n3-icon type="plus-circle"></n3-icon>
                                         新增用户
                                     </n3-button>
@@ -199,12 +208,15 @@
                         </n3-form-item>
                     </n3-form>
                 </div>
+
             </n3-tab>
         </n3-tabs>
     </div>
 </template>
 
 <script>
+    import FileSaver from 'file-saver'
+    import XLSX from 'xlsx'
     export default {
         name: 'User',
         data () {
@@ -350,6 +362,9 @@
             change(){
 
             },
+            showCustomModal(){
+                this.$refs.customModal.open()
+            },
             submitModify(){
               this.$refs.modify.validateFields(result=>{
                   console.log(result);
@@ -369,6 +384,27 @@
             },
             toggle(){
 
+            },
+            exportTable(){
+                /* 获取需要导出的表格DOM元素 */
+                var wb = XLSX.utils.table_to_book(document.querySelector('#table'))
+                /* 进行导出操作 */
+                var wbout = XLSX.write(wb, {bookType: 'xlsx', bookSST: true, type: 'array'})
+                try {
+                    FileSaver.saveAs(new Blob([wbout], {type: 'application/octet-stream'}), '表格.xlsx')
+                } catch (e) {
+                    if (typeof console !== 'undefined') console.log(e, wbout)
+                }
+                return wbout
+            },
+            onError(){
+                this.n3Alert({
+                    content: '上传失败',
+                    type: 'danger',
+                    placement: 'top-right',
+                    duration: 2000,
+                    width:'200px' // 内容不确定，建议设置width
+                })
             }
         },
     }
@@ -395,6 +431,7 @@
             margin-top: 10px;
             height: 30px;
             line-height: 30px;
+
         }
         .modify {
             margin-top: 15px;

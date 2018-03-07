@@ -111,6 +111,7 @@
                 },1000)
 
             },
+
             loadNode(node, resolve) {
                 if (node.level === 0) {
                     return resolve([{name: '/root'}, {name: '/home'}])
