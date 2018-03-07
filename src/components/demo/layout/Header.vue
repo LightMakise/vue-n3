@@ -42,7 +42,7 @@
                 this.$emit("changeTab",v)
             },
             logout(){
-                this.$store.commit("logout")
+                this.$store.dispatch("logout")
                 this.$router.push({path:"/demo/login"})
             }
         }
@@ -75,6 +75,9 @@
             border: 0;
             line-height: 20px;
             color: white;
+        }
+        .n3-dropdown-menu > li > a{
+            min-width: 0;
         }
     }
 </style>

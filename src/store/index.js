@@ -35,7 +35,14 @@ export default new Vuex.Store({
             sessionStorage.setItem("navbar",JSON.stringify(state.navbar))
         },
         clearNavbar(state){
+            sessionStorage.removeItem("navbar")
             state.navbar = []
+        }
+    },
+    actions: {
+        logout(context){
+            context.commit("clearNavbar");
+            context.commit("logout");
         }
     }
 })

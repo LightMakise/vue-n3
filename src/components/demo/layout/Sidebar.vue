@@ -39,6 +39,7 @@
                     path:'/demo/functional/user' ,
                 }
                 this.$store.commit('addNavbar', obj)
+                this.$router.push({path:"/demo/functional/user"})
             }
         },
         methods: {
