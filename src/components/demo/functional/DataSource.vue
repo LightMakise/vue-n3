@@ -1,7 +1,6 @@
 <template>
     <div class="datasource">
         数据源
-        <input type="text">
     </div>
 </template>
 

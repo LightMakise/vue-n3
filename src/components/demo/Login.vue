@@ -190,7 +190,7 @@
             },
             check(){
                 this.$store.commit("login")
-                this.$router.push({name:"Home"})
+                this.$router.push({path:this.$route.query.redirect})
             }
         },
         mounted () {

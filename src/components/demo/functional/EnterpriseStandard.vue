@@ -1,7 +1,6 @@
 <template>
     <div class="enterprisestandard">
         企业标准
-        <input type="text">
     </div>
 </template>
 

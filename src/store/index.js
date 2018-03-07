@@ -1,10 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
 Vue.use(Vuex)
+const navbar = JSON.parse(sessionStorage.getItem("navbar")||"[]")
 export default new Vuex.Store({
     state: {
         isLogin: parseInt(sessionStorage.getItem("isLogin") || 0),
-        navbar: []
+        navbar: navbar
     },
     mutations: {
         //点击路由的时候实时获取状态
@@ -23,6 +24,7 @@ export default new Vuex.Store({
         },
         addNavbar(state,staion){
             state.navbar.push(staion)
+            sessionStorage.setItem("navbar",JSON.stringify(state.navbar))
         },
         removeNavbar(state,index){
             console.log(index);
@@ -30,6 +32,7 @@ export default new Vuex.Store({
             state.navbar.forEach((item,index)=>{
                 item.id = index
             })
+            sessionStorage.setItem("navbar",JSON.stringify(state.navbar))
         },
         clearNavbar(state){
             state.navbar = []

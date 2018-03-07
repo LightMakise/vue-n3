@@ -14,6 +14,10 @@ const navData = [
                 title: "用户管理",
                 router: "/user",
             },
+            {
+                title: "权限管理",
+                router: "/authority",
+            },
         ]
     },{
         title: "数据管理",

@@ -10,6 +10,7 @@ import User from "@/components/demo/functional/User";
 import DataLocking from "@/components/demo/functional/DataLocking";
 import DataSource from "@/components/demo/functional/DataSource";
 import EnterpriseStandard from "@/components/demo/functional/EnterpriseStandard";
+import Authority from "@/components/demo/functional/Authority";
 
 Vue.use(Router)
 const router = new Router({
@@ -56,10 +57,10 @@ const router = new Router({
                         breadcrumbName: "功能菜单"
                     },
                     children:[
-                        {
-                            path: '/demo/functional',
-                            redirect: '/demo/functional/user'
-                        },
+                        // {
+                        //     path: '/demo/functional/',
+                        //     redirect: '/demo/functional/user'
+                        // },
                         {
                             path: '/demo/functional/organizational',
                             name: 'Organizational',
@@ -76,6 +77,15 @@ const router = new Router({
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "用户管理",
+                                breadcrumbTarget:1,
+                            },
+                        },{
+                            path: '/demo/functional/authority',
+                            name: 'Authority',
+                            component: Authority,
+                            meta: {
+                                requireAuth: true,
+                                breadcrumbName: "权限管理",
                                 breadcrumbTarget:1,
                             },
                         },{

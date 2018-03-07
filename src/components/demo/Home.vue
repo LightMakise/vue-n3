@@ -21,7 +21,7 @@
             return {}
         },
         created(){
-            this.changTab()
+//            this.changTab()
         },
         methods: {
             changTab(v){

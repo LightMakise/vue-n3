@@ -1,7 +1,6 @@
 <template>
     <div class="datalocking">
         数据锁定
-        <input type="text">
     </div>
 </template>
 

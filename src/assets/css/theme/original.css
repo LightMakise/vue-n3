@@ -9,3 +9,14 @@
 .n3-datepicker-dateRange span:hover{ background-color:#a7d2f5 !important; }
 .n3-switch-on{background-color:#54b4eb !important;transition: background .55s ease-in-out,box-shadow .55s ease-in-out,color .55s ease-in-out,-webkit-box-shadow .55s ease-in-out;}
 .n3-page-item-active{background-color: #1684c2 !important;border-color:#1684c2 !important;}
+.n3-checkbox-checked .n3-checkbox-inner{
+    border-color: transparent;
+    background-color: #1684c2;
+}
+.n3-tree-active>.n3-tree-node__content{color: #1684c2}
+.page-content .n3-btn-group > .n3-btn, .n3-dropdown-menu > li > a {
+    min-width: 220px
+}
+.page-content .n3-btn {
+    width: 150px;
+}

@@ -1,9 +1,9 @@
 <template>
     <div class="organizational">
-        <n3-tabs @change="change" :value="1">
+        <n3-tabs @change="change" :value="0">
             <n3-tab header="用户管理">
                 <div class="query">
-                    <n3-form ref='form-query'>
+                    <n3-form ref='query'>
                         <n3-form-item
                                 label="用户ID:"
                                 :label-col="3">
@@ -375,12 +375,6 @@
 </script>
 <style lang="less">
     .organizational {
-        .n3-btn-group > .n3-btn, .n3-dropdown-menu > li > a {
-            min-width: 220px
-        }
-        .n3-btn {
-            width: 150px;
-        }
         .query {
             margin-top: 15px;
             border-bottom: 1px solid #cccccc;

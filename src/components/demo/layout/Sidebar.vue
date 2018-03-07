@@ -31,6 +31,7 @@
 
         },
         created(){
+            console.log(this.$store.state.navbar.length);
             if(this.$store.state.navbar.length === 0){
                 let obj = {
                     id:0,
