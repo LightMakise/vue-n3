@@ -8,7 +8,7 @@ body {
     min-width: 1024px;
 }
 
-#app, .wrapper, body, html {
+#app, .wrapper, body, html ,.index{
     width: 100%;
     height: 100%;
     overflow: auto;

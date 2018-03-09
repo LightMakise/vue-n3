@@ -11,6 +11,13 @@ import DataLocking from "@/components/demo/functional/DataLocking";
 import DataSource from "@/components/demo/functional/DataSource";
 import EnterpriseStandard from "@/components/demo/functional/EnterpriseStandard";
 import Authority from "@/components/demo/functional/Authority";
+import DocHome from "@/components/doc/Home";
+import Axios from "@/components/doc/Axios";
+import Echarts from "@/components/doc/Echarts";
+import Editor from "@/components/doc/Editor";
+import ExportTable from "@/components/doc/ExportTable";
+import Ueditor from "@/components/doc/Ueditor";
+import Index from "@/components/doc/Index";
 
 Vue.use(Router)
 const router = new Router({
@@ -19,6 +26,9 @@ const router = new Router({
         {
             path: '/',
             redirect: '/demo/functional'
+        },{
+            path: '/doc',
+            redirect: '/doc/home'
         },
         //404页面跳转
         {
@@ -48,7 +58,7 @@ const router = new Router({
                         requireAuth: true,
                         breadcrumbName: "系统设置"
                     },
-                },{
+                }, {
                     path: '/demo/functional',
                     name: 'FunctionalIndex',
                     component: FunctionalIndex,
@@ -56,7 +66,7 @@ const router = new Router({
                         requireAuth: true,
                         breadcrumbName: "功能菜单"
                     },
-                    children:[
+                    children: [
                         // {
                         //     path: '/demo/functional/',
                         //     redirect: '/demo/functional/user'
@@ -68,86 +78,94 @@ const router = new Router({
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "机构管理",
-                                breadcrumbTarget:1,
+                                breadcrumbTarget: 1,
                             },
-                        },{
+                        }, {
                             path: '/demo/functional/user',
                             name: 'User',
                             component: User,
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "用户管理",
-                                breadcrumbTarget:1,
+                                breadcrumbTarget: 1,
                             },
-                        },{
+                        }, {
                             path: '/demo/functional/authority',
                             name: 'Authority',
                             component: Authority,
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "权限管理",
-                                breadcrumbTarget:1,
+                                breadcrumbTarget: 1,
                             },
-                        },{
+                        }, {
                             path: '/demo/functional/datalocking',
                             name: 'DataLocking',
                             component: DataLocking,
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "数据锁定",
-                                breadcrumbTarget:2,
+                                breadcrumbTarget: 2,
                             },
-                        },{
+                        }, {
                             path: '/demo/functional/datasource',
                             name: 'DataSource',
                             component: DataSource,
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "数据源",
-                                breadcrumbTarget:2,
+                                breadcrumbTarget: 2,
                             },
-                        },{
+                        }, {
                             path: '/demo/functional/enterprisestandard',
                             name: 'EnterpriseStandard',
                             component: EnterpriseStandard,
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "企业标准",
-                                breadcrumbTarget:2,
+                                breadcrumbTarget: 2,
                             },
                         },
                     ]
                 },
             ]
         },
-
-
         //  文档
-        // {
-        //   path: '/doc/',
-        //   name: 'Home',
-        //   component: Home
-        // },{
-        //   path: '/doc/echarts',
-        //   name: 'Echarts',
-        //   component: Echarts
-        // }, {
-        //   path: '/doc/axios',
-        //   name: 'Axios',
-        //   component: Axios
-        // },{
-        //   path: '/doc/exportTable',
-        //   name: 'ExportTable',
-        //   component: ExportTable
-        // },{
-        //   path: '/doc/editor',
-        //   name: 'Editor',
-        //   component: Editor
-        // },{
-        //   path: '/doc/ueditor',
-        //   name: 'Ueditor',
-        //   component: Ueditor
-        // },
+        {
+            path: "/doc/",
+            name:"DocIndex",
+            component:Index,
+            children:[
+                {
+                    path: '/doc/home',
+                    name: 'DocHome',
+                    component: DocHome
+                }, {
+                    path: '/doc/echarts',
+                    name: 'Echarts',
+                    component: Echarts
+                }, {
+                    path: '/doc/axios',
+                    name: 'Axios',
+                    component: Axios
+                }, {
+                    path: '/doc/exportTable',
+                    name: 'ExportTable',
+                    component: ExportTable
+                }, {
+                    path: '/doc/editor',
+                    name: 'Editor',
+                    component: Editor
+                }, {
+                    path: '/doc/ueditor',
+                    name: 'Ueditor',
+                    component: Ueditor
+                },
+            ]
+
+        },
+
+
 
     ]
 })

@@ -8,7 +8,7 @@
 <script>
   import api from "@/http/api"
 export default {
-  name: 'Home',
+  name: 'DocHome',
   data () {
     return {
 
