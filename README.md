@@ -26,6 +26,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 - [x] 表单校验 -- 完成
 - [x] 图片上传区域显示 -- 完成
 - [x] 路由选项卡切换缓存页面数据 -- 完成
+- [x] 图表 -- 完成
 - [ ] 主题切换 -- 编写中
 
 # 项目截图
@@ -52,6 +53,10 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 > 上传文件页面
 
 ![上传文件页面](./demo-img/upload.png)
+
+> 图标页面
+
+![图标页面](./demo-img/charts.png)
 
 > 文档页面
 
