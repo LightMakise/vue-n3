@@ -21,7 +21,8 @@
                     <n3-icon type="gear"></n3-icon>
                 </n3-button>
             </div>
-            <li><a href="#" @click="logout">退出</a></li>
+            <li><a href="#" @click="doc">查看文档</a></li>
+            <li><a href="#" @click="logout">退出登录</a></li>
         </n3-dropdown>
         </div>
     </div>
@@ -44,6 +45,9 @@
             logout(){
                 this.$store.dispatch("logout")
                 this.$router.push({path:"/demo/login"})
+            },
+            doc(){
+                this.$router.push({path:"/doc"})
             }
         }
     }
