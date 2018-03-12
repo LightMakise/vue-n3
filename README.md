@@ -88,13 +88,13 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │   │   │   │   └── theme.css 		                                //当前主题样式
 │   │   ├── images					                //图片文件夹
 │   │   └── logo.png
-│   ├── components					                  //组件
-│   │   ├── demo					                  //后台管理项目组件
-│   │   │   ├── Home.vue			                  //首页
-│   │   │   ├── Login.vue			                    //登录页面
-│   │   │   ├── functional			                    //功能菜单主页
-│   │   │   ├── layout				                    //布局
-│   │   │   └── system				                    //系统设置主页
+│   ├── components					                //组件
+│   │   ├── demo					                //后台管理项目组件
+│   │   │   ├── Home.vue			                        //首页
+│   │   │   ├── Login.vue			                        //登录页面
+│   │   │   ├── functional			                        //功能菜单主页
+│   │   │   ├── layout				                        //布局
+│   │   │   └── system				                        //系统设置主页
 │   │   ├── doc						                 //文档页面
 │   │   │   ├── Axios.vue		
 │   │   │   ├── Echarts.vue
