@@ -7,6 +7,7 @@
 vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-quill-editor + (xlsx+file-saver）
 
 #项目启动
+
 	git clone https://github.com/LightMakise/vue-n3.git 
 	
 	cd vue-n3
