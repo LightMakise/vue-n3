@@ -104,17 +104,17 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │   │   │   ├── Index.vue
 │   │   │   └── Ueditor.vue
 │   │   └── module					                //公用的组件
-│   │       └── Navbar.vue			                    //选项卡
+│   │       └── Navbar.vue			                        //选项卡
 │   ├── http						                //HTTP封装
 │   │   ├── api.js					                //api调用封装
 │   │   └── http.js					                //axiox封装
 │   ├── main.js						                //程序入口文件，加载各种公共组件
 │   ├── nav							        //导航数据
-│   │   └── index.js				                    //导航数据主文件
+│   │   └── index.js				                        //导航数据主文件
 │   ├── router						                //路由
-│   │   └── index.js				                    //路由主文件
+│   │   └── index.js				                        //路由主文件
 │   └── store						                //状态管理器
-│       └── index.js				                    //状态管理器主文件
+│       └── index.js				                        //状态管理器主文件
 └── static							        //静态资源文件夹，存放第三方类库
     └── UE							        //Ueidtor源文件
     
