@@ -22,8 +22,6 @@
                             block
                     >
                         {{ loading ? '登录中' : '登录' }}
-
-
                     </n3-button>
                 </div>
             </n3-form>

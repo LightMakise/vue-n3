@@ -1,16 +1,6 @@
 import Vue from "vue";
 import store from "@/store/index";
 import Router from "vue-router";
-import Login from "@/components/demo/Login";
-import Home from "@/components/demo/Home";
-import SystemIndex from "@/components/demo/system/Index";
-import FunctionalIndex from "@/components/demo/functional/Index";
-import Organizational from "@/components/demo/functional/Organizational";
-import User from "@/components/demo/functional/User";
-import DataLocking from "@/components/demo/functional/DataLocking";
-import DataSource from "@/components/demo/functional/DataSource";
-import EnterpriseStandard from "@/components/demo/functional/EnterpriseStandard";
-import Authority from "@/components/demo/functional/Authority";
 import DocHome from "@/components/doc/Home";
 import Axios from "@/components/doc/Axios";
 import Echarts from "@/components/doc/Echarts";
@@ -18,7 +8,7 @@ import Editor from "@/components/doc/Editor";
 import ExportTable from "@/components/doc/ExportTable";
 import Ueditor from "@/components/doc/Ueditor";
 import Index from "@/components/doc/Index";
-
+import Datalocking from "@/components/demo/functional/Datalocking";
 Vue.use(Router)
 const router = new Router({
     routes: [
@@ -39,12 +29,12 @@ const router = new Router({
         {
             path: '/demo/login',
             name: 'Login',
-            component: Login
+            component:  resolve => require(['@/components/demo/Login'], resolve),
         },
         {
             path: '/demo/home',
             name: 'Home',
-            component: Home,
+            component:  resolve => require(['@/components/demo/Home'], resolve),
             meta: {
                 requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
                 breadcrumbName: "首页"
@@ -53,7 +43,7 @@ const router = new Router({
                 {
                     path: '/demo/system',
                     name: 'SystemIndex',
-                    component: SystemIndex,
+                    component:  resolve => require(['@/components/demo/system/Index'], resolve),
                     meta: {
                         requireAuth: true,
                         breadcrumbName: "系统设置"
@@ -61,7 +51,7 @@ const router = new Router({
                 }, {
                     path: '/demo/functional',
                     name: 'FunctionalIndex',
-                    component: FunctionalIndex,
+                    component:  resolve => require(['@/components/demo/functional/Index'], resolve),
                     meta: {
                         requireAuth: true,
                         breadcrumbName: "功能菜单"
@@ -74,7 +64,7 @@ const router = new Router({
                         {
                             path: '/demo/functional/organizational',
                             name: 'Organizational',
-                            component: Organizational,
+                            component:  resolve => require(['@/components/demo/functional/Organizational'], resolve),
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "机构管理",
@@ -83,7 +73,7 @@ const router = new Router({
                         }, {
                             path: '/demo/functional/user',
                             name: 'User',
-                            component: User,
+                            component:  resolve => require(['@/components/demo/functional/User'], resolve),
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "用户管理",
@@ -92,7 +82,7 @@ const router = new Router({
                         }, {
                             path: '/demo/functional/authority',
                             name: 'Authority',
-                            component: Authority,
+                            component:  resolve => require(['@/components/demo/functional/Authority'], resolve),
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "权限管理",
@@ -101,7 +91,7 @@ const router = new Router({
                         }, {
                             path: '/demo/functional/datalocking',
                             name: 'DataLocking',
-                            component: DataLocking,
+                            component:  Datalocking,
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "数据锁定",
@@ -110,7 +100,7 @@ const router = new Router({
                         }, {
                             path: '/demo/functional/datasource',
                             name: 'DataSource',
-                            component: DataSource,
+                            component:  resolve => require(['@/components/demo/functional/DataSource'], resolve),
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "数据源",
@@ -119,7 +109,7 @@ const router = new Router({
                         }, {
                             path: '/demo/functional/enterprisestandard',
                             name: 'EnterpriseStandard',
-                            component: EnterpriseStandard,
+                            component:  resolve => require(['@/components/demo/functional/EnterpriseStandard'], resolve),
                             meta: {
                                 requireAuth: true,
                                 breadcrumbName: "企业标准",
