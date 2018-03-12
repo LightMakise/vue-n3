@@ -7,7 +7,7 @@
 
 vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-quill-editor + (xlsx+file-saver）
 
-#项目启动
+# 项目启动
 
 	git clone https://github.com/LightMakise/vue-n3.git
 
@@ -123,5 +123,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 ```
 
 # 备注
+
 > 本项目如果对您有帮助,请您star，您的star就是我的动力
+
 > 该项目部分页面借鉴了一位大神的作品 [点击此处看大神的项目](https://github.com/N3-components/N3-admin) 
