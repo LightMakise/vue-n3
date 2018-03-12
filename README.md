@@ -59,7 +59,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 # 目录说明
 ```
 ├── README.md     
-├── build 	 						//webpack配置文件
+├── build 	 						        //webpack配置文件
 │   ├── build.js					
 │   ├── check-versions.js
 │   ├── logo.png
@@ -68,34 +68,34 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │   ├── webpack.base.conf.js
 │   ├── webpack.dev.conf.js
 │   └── webpack.prod.conf.js
-├── config							//项目路径配置
+├── config							        //项目路径配置
 │   ├── dev.env.js
 │   ├── index.js
 │   └── prod.env.js
-├── dist							//上线文件，可访问
+├── dist							        //上线文件，可访问
 │   ├── index.html
 │   └── static
-├── index.html						//项目入口html文件
+├── index.html							    //项目入口html文件
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js			
-├── src								//源码文件
-│   ├── App.vue						//页面入口文件
-│   ├── assets						//资源文件夹
-│   │   ├── css						//样式表文件夹
-│   │   │   ├── global.css			//全局样式
-│   │   │   ├── theme				//部分主题样式
-│   │   │   │   └── theme.css 		//当前主题样式
-│   │   ├── images					//图片文件夹
+├── src								        //源码文件
+│   ├── App.vue							    //页面入口文件
+│   ├── assets							    //资源文件夹
+│   │   ├── css							    //样式表文件夹
+│   │   │   ├── global.css					//全局样式
+│   │   │   ├── theme						//部分主题样式
+│   │   │   │   └── theme.css 		        //当前主题样式
+│   │   ├── images					        //图片文件夹
 │   │   └── logo.png
-│   ├── components					//组件
-│   │   ├── demo					//后台管理项目组件
-│   │   │   ├── Home.vue			//首页
-│   │   │   ├── Login.vue			//登录页面
-│   │   │   ├── functional			//功能菜单主页
-│   │   │   ├── layout				//布局
-│   │   │   └── system				//系统设置主页
-│   │   ├── doc						//文档页面
+│   ├── components					        //组件
+│   │   ├── demo					        //后台管理项目组件
+│   │   │   ├── Home.vue			        //首页
+│   │   │   ├── Login.vue			        //登录页面
+│   │   │   ├── functional			        //功能菜单主页
+│   │   │   ├── layout				        //布局
+│   │   │   └── system				        //系统设置主页
+│   │   ├── doc						        //文档页面
 │   │   │   ├── Axios.vue		
 │   │   │   ├── Echarts.vue
 │   │   │   ├── Editor.vue
@@ -103,20 +103,20 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │   │   │   ├── Home.vue
 │   │   │   ├── Index.vue
 │   │   │   └── Ueditor.vue
-│   │   └── module					//公用的组件
-│   │       └── Navbar.vue			//选项卡
-│   ├── http						//HTTP封装
-│   │   ├── api.js					//api调用封装
-│   │   └── http.js					//axiox封装
-│   ├── main.js						//程序入口文件，加载各种公共组件
-│   ├── nav							//导航数据
-│   │   └── index.js				//导航数据主文件
-│   ├── router						//路由
-│   │   └── index.js				//路由主文件
-│   └── store						//状态管理器
-│       └── index.js				//状态管理器主文件
-└── static							//静态资源文件夹，存放第三方类库
-    └── UE							//Ueidtor源文件
+│   │   └── module					        //公用的组件
+│   │       └── Navbar.vue			        //选项卡
+│   ├── http						        //HTTP封装
+│   │   ├── api.js					        //api调用封装
+│   │   └── http.js					        //axiox封装
+│   ├── main.js						        //程序入口文件，加载各种公共组件
+│   ├── nav							        //导航数据
+│   │   └── index.js				        //导航数据主文件
+│   ├── router						        //路由
+│   │   └── index.js				        //路由主文件
+│   └── store						        //状态管理器
+│       └── index.js				        //状态管理器主文件
+└── static							        //静态资源文件夹，存放第三方类库
+    └── UE							        //Ueidtor源文件
     
 ```
 
