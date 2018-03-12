@@ -2,18 +2,19 @@
 # 简述
 本项目是一个后台管理框架，适用于初学者或是有其他框架经验的同学来借鉴，该项目的重点为路由的多层嵌套，异步路由的使用，以及整合部分三方插件，简单点的封装http请求，目前只有静态的东西，为设计到调用接口，如果有大神看到的不足之处还希望多多包涵，多提宝贵意见。
 
+
 # 技术栈
 
 vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-quill-editor + (xlsx+file-saver）
 
 #项目启动
 
-	git clone https://github.com/LightMakise/vue-n3.git 
-	
+	git clone https://github.com/LightMakise/vue-n3.git
+
 	cd vue-n3
-	
+
 	npm install
-	
+
 	npm run dev
 
 # 目标功能
@@ -59,9 +60,9 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 
 # 目录说明
 ```
-├── README.md     
+├── README.md
 ├── build 	 						        //webpack配置文件
-│   ├── build.js					
+│   ├── build.js
 │   ├── check-versions.js
 │   ├── logo.png
 │   ├── utils.js
@@ -79,7 +80,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 ├── index.html							        //项目入口html文件
 ├── package-lock.json
 ├── package.json
-├── postcss.config.js			
+├── postcss.config.js
 ├── src								        //源码文件
 │   ├── App.vue							        //页面入口文件
 │   ├── assets							        //资源文件夹
@@ -97,7 +98,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │   │   │   ├── layout				                        //布局
 │   │   │   └── system				                        //系统设置主页
 │   │   ├── doc						                //文档页面
-│   │   │   ├── Axios.vue		
+│   │   │   ├── Axios.vue
 │   │   │   ├── Echarts.vue
 │   │   │   ├── Editor.vue
 │   │   │   ├── ExportTable.vue
@@ -118,8 +119,9 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │       └── index.js				                        //状态管理器主文件
 └── static							        //静态资源文件夹，存放第三方类库
     └── UE							        //Ueidtor源文件
-    
+
 ```
 
 # 备注
+> 本项目如果对您有帮助,请您star，您的star就是我的动力
 > 该项目部分页面借鉴了一位大神的作品 [点击此处看大神的项目](https://github.com/N3-components/N3-admin) 
