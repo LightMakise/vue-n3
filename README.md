@@ -27,7 +27,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 - [x] 图片上传区域显示 -- 完成
 - [x] 路由选项卡切换缓存页面数据 -- 完成
 - [x] 图表 -- 完成
-- [ ] 主题切换 -- 编写中
+- [x] 主题切换 -- 完成
 
 # 项目截图
 > 登录页面
@@ -54,9 +54,13 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 
 ![上传文件页面](./demo-img/upload.png)
 
-> 图标页面
+> 图表页面
 
-![图标页面](./demo-img/charts.png)
+![图表页面](./demo-img/charts.png)
+
+> 黑红主题页面
+
+![黑红主题页面](./demo-img/theme.png)
 
 > 文档页面
 
@@ -92,7 +96,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │   │   ├── css							        //样式表文件夹
 │   │   │   ├── global.css					        //全局样式
 │   │   │   ├── theme						        //部分主题样式
-│   │   │   │   └── theme.css 		                                //当前主题样式
+│   │   │   │   └── theme.less 		                                //当前主题样式
 │   │   ├── images					                //图片文件夹
 │   │   └── logo.png
 │   ├── components					                //组件
@@ -132,3 +136,5 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 > 本项目如果对您有帮助,请您star，您的star就是我的动力
 
 > 该项目部分页面借鉴了一位大神的作品 [点击此处看大神的项目](https://github.com/N3-components/N3-admin) 
+
+> 本项目持续更新中...

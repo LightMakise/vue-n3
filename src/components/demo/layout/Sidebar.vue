@@ -95,11 +95,11 @@
                 margin-top: 2px;
             }
             .n3-nav-item:hover, .n3-nav-item.is-active:hover {
-                background: #a7d2f5;
+                background: #54b4ec;
                 color: #ffffff;
             }
             .n3-nav-item.is-active {
-                background: #a7d2f5;
+                background: #54b4ec;
                 color: #ffffff;
             }
         }

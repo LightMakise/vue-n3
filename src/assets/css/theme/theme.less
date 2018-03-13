@@ -1,0 +1,162 @@
+//蓝色主题
+@blue-main-color: #54b4eb; //主色蓝 浅蓝
+@blue-main-nav-button-color: #1684c2; //导航按钮选中蓝色
+@blue-main-deep-color: #207ecc; //深蓝
+@blue-main-deep-border-color: #7da8f5; //深蓝-边框颜色
+@blue-datepicker-hover: #a7d2f5; //时间选择器经过时候颜色
+.blue {
+  .n3-btn-primary {
+    background-color: @blue-main-color !important;
+    border-color: @blue-main-color !important
+  }
+  .n3-btn-primary.n3-btn-active {
+    background-color: @blue-main-nav-button-color !important;
+    border-color: @blue-main-nav-button-color !important;
+  }
+  .n3-nav-tabs-pills > li.n3-nav-tabs-active > a {
+    background-color: @blue-datepicker-hover !important;
+  }
+  .n3-breadcrumb {
+    padding: 0;
+  }
+  .n3-breadcrumb > .n3-breadcrumb-active {
+    color: @blue-main-color
+  }
+  .n3-form-control:focus {
+    border: 1px solid @blue-main-color;
+    outline: 0
+  }
+
+  .n3-datepicker-dateRange-item-active {
+    background-color: @blue-main-color !important;
+  }
+  .n3-datepicker-dateRange span:hover {
+    background-color: @blue-datepicker-hover !important;
+  }
+  .n3-switch-on {
+    background-color: @blue-main-color !important;
+    transition: background .55s ease-in-out, box-shadow .55s ease-in-out, color .55s ease-in-out, -webkit-box-shadow .55s ease-in-out;
+  }
+  .n3-page-item-active {
+    background-color: @blue-main-nav-button-color !important;
+    border-color: @blue-main-nav-button-color !important;
+  }
+  .n3-checkbox-checked .n3-checkbox-inner {
+    border-color: transparent;
+    background-color: @blue-main-nav-button-color;
+  }
+  .n3-tree-active > .n3-tree-node__content {
+    color: #1684c2
+  }
+  .page-content .n3-btn-group > .n3-btn, .n3-dropdown-menu > li > a {
+    min-width: 220px
+  }
+  .page-content .n3-btn {
+    width: 150px;
+  }
+  .header {
+    background: @blue-main-color;
+  }
+  .sidebar {
+    .n3-subnav {
+      border: 1px solid @blue-main-deep-border-color;
+      background-color: @blue-main-deep-color;
+      .n3-subnav__title {
+        color: #ffffff !important;
+      }
+      .n3-nav-item:hover, .n3-nav-item.is-active:hover {
+        background: @blue-main-color;
+        color: #ffffff;
+      }
+      .n3-nav-item.is-active {
+        background: @blue-main-color;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+//黑红主题
+@black-main-color: #000000; //主色 黑色
+@black-main-button-color: #f97575; //按钮 红色
+@black-main-nav-button-color: #e41a1a; //导航按钮选中 深红色
+@black-datepicker-hover: #f9b0b0; //时间选择器经过时候颜色
+.black {
+  .n3-btn-primary {
+    background-color: @black-main-button-color !important;
+    border-color: @black-main-button-color !important
+  }
+  .n3-btn-primary.n3-btn-active {
+    background-color: @black-main-nav-button-color !important;
+    border-color: @black-main-nav-button-color !important;
+  }
+  .n3-nav-tabs-pills > li.n3-nav-tabs-active > a {
+    background-color: @black-datepicker-hover !important;
+  }
+  .n3-breadcrumb {
+    padding: 0;
+  }
+  .n3-breadcrumb > .n3-breadcrumb-active {
+    color: @black-main-color
+  }
+  .n3-form-control:focus {
+    border: 1px solid @black-main-color;
+    outline: 0
+  }
+
+  .n3-datepicker-dateRange-item-active {
+    background-color: @black-main-button-color !important;
+  }
+  .n3-datepicker-dateRange span:hover {
+    background-color: @black-datepicker-hover !important;
+  }
+  .n3-switch-on {
+    background-color: @black-main-button-color !important;
+    transition: background .55s ease-in-out, box-shadow .55s ease-in-out, color .55s ease-in-out, -webkit-box-shadow .55s ease-in-out;
+  }
+  .n3-page-item-active {
+    background-color: @black-main-button-color !important;
+    border-color: @black-main-button-color !important;
+  }
+  .n3-checkbox-checked .n3-checkbox-inner {
+    border-color: transparent;
+    background-color: @black-main-button-color;
+  }
+  .n3-tree-active > .n3-tree-node__content {
+    color: #1684c2
+  }
+  .page-content .n3-btn-group > .n3-btn, .n3-dropdown-menu > li > a {
+    min-width: 220px
+  }
+  .page-content .n3-btn {
+    width: 150px;
+  }
+  .header {
+    background: @black-main-color;
+  }
+  .sidebar {
+    .n3-subnav {
+      border: 1px solid @black-main-color;
+      background-color: @black-main-color;
+      .n3-subnav__title {
+        color: #ffffff !important;
+      }
+      .n3-nav-item:hover, .n3-nav-item.is-active:hover {
+        background: @black-main-button-color;
+        color: #ffffff;
+      }
+      .n3-nav-item.is-active {
+        background: @black-main-button-color;
+        color: #ffffff;
+      }
+    }
+  }
+  .navbar {
+    ul {
+      .active {
+        background-color: @black-main-button-color;
+        color: #ffffff;
+      }
+    }
+  }
+}

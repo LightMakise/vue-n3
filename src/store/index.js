@@ -5,9 +5,16 @@ const navbar = JSON.parse(sessionStorage.getItem("navbar")||"[]")
 export default new Vuex.Store({
     state: {
         isLogin: parseInt(sessionStorage.getItem("isLogin") || 0),
-        navbar: navbar
+        navbar: navbar,
+        theme:"blue",
     },
     mutations: {
+        //切换主题
+        changeTheme(state){
+
+            state.theme = state.theme==="blue"?"black":"blue"
+            console.log(state.theme);
+        },
         //点击路由的时候实时获取状态
         updateLoginState(state){
             state.isLogin = parseInt(sessionStorage.getItem("isLogin") || 0)

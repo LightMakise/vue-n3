@@ -24,7 +24,7 @@ Vue.use(N3Components)
 // install echarts 全局引入 也可以按需引入
 Vue.prototype.$echarts = echarts
 
-import "@/assets/css/theme/original.css"
+import "@/assets/css/theme/theme.less"
 Vue.config.productionTip = false
 
 

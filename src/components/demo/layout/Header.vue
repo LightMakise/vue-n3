@@ -22,6 +22,7 @@
                 </n3-button>
             </div>
             <li><a href="#" @click="doc">查看文档</a></li>
+            <li><a href="#" @click="changeTheme">切换主题</a></li>
             <li><a href="#" @click="logout">退出登录</a></li>
         </n3-dropdown>
         </div>
@@ -48,6 +49,9 @@
             },
             doc(){
                 this.$router.push({path:"/doc"})
+            },
+            changeTheme(){
+                this.$store.commit("changeTheme")
             }
         }
     }
@@ -59,7 +63,6 @@
         padding: 0 5px;
         min-width: 1000px;
         width: 100%;
-        background: #54b4eb;
         height: 48px;
         line-height: 48px;
         .name{
