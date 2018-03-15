@@ -9,7 +9,6 @@
                         <router-view/>
                     </keep-alive>
                 </div>
-
             </div>
         </div>
     </div>
