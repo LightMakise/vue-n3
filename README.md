@@ -3,6 +3,9 @@
 本项目是一个后台管理框架，适用于初学者或是有其他框架经验的同学来借鉴，该项目的重点为路由的多层嵌套，异步路由的使用，以及整合部分三方插件，简单点的封装http请求，目前只有静态的东西，为设计到调用接口，如果有大神看到的不足之处还希望多多包涵，多提宝贵意见。
 
 
+# 项目演示
+[点击此处查看项目演示](https://lightmakise.github.io/vue-n3/dist/)
+
 # 技术栈
 
 vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-quill-editor + (xlsx+file-saver）
