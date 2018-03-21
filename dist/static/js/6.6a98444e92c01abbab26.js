@@ -1,0 +1,2 @@
+webpackJsonp([6],{Wkyw:function(e,t){},zs4L:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={name:"SystemIndex",data:()=>({}),methods:{}},a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"system-index"},[this._v("\n    系统设置\n")])},staticRenderFns:[]};var i=n("VU/8")(s,a,!1,function(e){n("Wkyw")},"data-v-62357cea",null);t.default=i.exports}});
+//# sourceMappingURL=6.6a98444e92c01abbab26.js.map
