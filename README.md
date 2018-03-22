@@ -123,7 +123,7 @@ vue2 + N3 +vuex + vue-router + webpack + axios + Ueditor + echars + less + vue-q
 │   │   ├── api.js					                //api调用封装
 │   │   └── http.js					                //axiox封装
 │   ├── main.js						                //程序入口文件，加载各种公共组件
-│   ├── config							      //项目内配置文件
+│   ├── config							        //项目内配置文件
 │   │   ├── system.js					                //项目系统配置文件
 │   │   └── nav.js				                        //导航数据主文件
 │   ├── router						                //路由
