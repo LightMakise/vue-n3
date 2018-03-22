@@ -17,7 +17,7 @@
 
 <script>
     import N3Nav from "../../../../node_modules/N3-components/src/Nav/n3Nav";
-    import navData from "@/nav/index";
+    import navData from "@/config/nav";
     export default {
         components: {N3Nav}, name: 'Sidebar',
         data () {
@@ -82,7 +82,7 @@
         height: 90%;
         position: absolute;
         left: 2px;
-        top: 75px;
+        top: 50px;
         .n3-subnav {
             border: 1px solid #7da8f5;
             background-color: #207ecc;

@@ -1,5 +1,5 @@
 <template>
-    <div class="crumbnav">
+    <div class="crumbnav" v-show="isDisplay">
         <!--{{path}}-->
         <!--:href="index < pathArr.length - 1?item.path:null"-->
         <n3-breadcrumb>
@@ -11,12 +11,18 @@
 </template>
 
 <script>
-    import navData from "@/nav/index"
+    import navData from "@/config/nav"
     export default {
         name: "Crumbnav",
         data () {
             return {
                 pathArr: []
+            }
+        },
+        props:{
+            isDisplay:{
+                type:Boolean,
+                default:true,
             }
         },
         mounted(){
@@ -61,7 +67,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
     .crumbnav {
-        padding-left: 20px;
+        margin-top: 50px;
+        padding-left: 213px;
         height: 30px;
         line-height: 30px;
         color: #999999;

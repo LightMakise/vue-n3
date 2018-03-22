@@ -34,6 +34,7 @@ const router = new Router({
         {
             path: '/demo/home',
             name: 'Home',
+            redirect: '/demo/functional/user',
             component:  resolve => require(['@/components/demo/Home'], resolve),
             meta: {
                 requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的

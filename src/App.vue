@@ -1,5 +1,5 @@
 <template>
-    <div id="app" :class="theme">
+    <div id="app" :class="system.theme">
         <router-view/>
     </div>
 </template>
@@ -14,7 +14,7 @@
             }
         },
         computed: mapState({
-                theme: 'theme',
+            system: 'system',
             })
     }
 </script>

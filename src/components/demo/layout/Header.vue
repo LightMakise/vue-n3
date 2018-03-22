@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="name pull-left font-26 color-white">
-            Catarc 后台管理系统
+            {{system.title}}
         </div>
         <div class="buttons pull-left">
             <n3-button-group>
@@ -30,12 +30,20 @@
 </template>
 
 <script>
-
+    import {mapState} from 'vuex'
     export default {
         name: 'Header',
         data () {
             return {
-                curPage:"menu"
+                curPage:"menu",
+            }
+        },
+        computed: mapState({
+            system: 'system',
+        }),
+        created(){
+            if(this.$route.path === "/demo/system"){
+                this.curPage = 'system'
             }
         },
         methods: {
@@ -60,18 +68,28 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
     .header {
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1000;
         padding: 0 5px;
         min-width: 1000px;
         width: 100%;
         height: 48px;
         line-height: 48px;
         .name{
+
+            min-height: 1px;
             width: 30%;
         }
         .buttons{
+
+            min-height: 1px;
             width: 50%;
         }
         .info{
+
+            min-height: 1px;
             width: 20%;
         }
         .n3-dropdown-con{

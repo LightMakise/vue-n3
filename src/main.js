@@ -27,6 +27,9 @@ Vue.prototype.$echarts = echarts
 import "@/assets/css/theme/theme.less"
 Vue.config.productionTip = false
 
+//使用配置文件
+import system from "@/config/system"
+Vue.prototype.$system = system
 
 /* eslint-disable no-new */
 new Vue({
