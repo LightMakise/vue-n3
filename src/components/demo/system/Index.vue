@@ -32,9 +32,11 @@
             return {
             }
         },
-        computed: mapState({
+        computed: {
+            ...mapState({
             system: 'system',
-        }),
+            })
+        },
         methods: {
             modifyTheme(v){
                 let obj = {
